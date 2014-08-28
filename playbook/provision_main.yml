@@ -1,0 +1,9 @@
+- hosts: all
+  sudo: true
+  user: vagrant
+  tasks:
+    - include: essential.yml  tags=essential
+    - include: mysql.yml  tags=mysql
+    - include: vim.yml  tags=vim
+
+
