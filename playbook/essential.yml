@@ -15,6 +15,7 @@
     - git
     - zsh
     - gauche
+    - rlwrap
 
 - name: zsh setting
   shell: chsh -s /usr/bin/zsh vagrant

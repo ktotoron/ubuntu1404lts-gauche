@@ -90,6 +90,8 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+" scheme
+let g:lisp_rainbow = 1
 "/NeoComplete-------------------------------------
 
 
