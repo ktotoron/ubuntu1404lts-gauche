@@ -34,10 +34,15 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Shougo/unite.vim'
 
 " Gauche用補完 
-NeoBundle 'git://github.com/aharisu/vim-gdev'
+NeoBundle 'aharisu/vim-gdev'
 
 " vim-niji(lisp用括弧)
 NeoBundle 'amdt/vim-niji'
+
+" goshrepl
+NeoBundle 'aharisu/vim_goshrepl.git', {
+\    'build' : 'make && make install',
+\ }
 
 "/NeoBundle-------------------------------------
 
@@ -117,6 +122,10 @@ imap <C-C> <Plug>(gosh_info_close)
 "カーソル位置のシンボルが定義されている場所にジャンプ
 nmap <F12> <Plug>(gosh_goto_define)
 nmap <F11> <Plug>(gosh_goto_define_split)
+
+" gosh-repl
+let g:neocomplete#keyword_patterns['gosh-repl'] = "[[:alpha:]+*/@$_=.!?-][[:alnum:]+*/@$_:=.!?-]*"
+vmap <CR> <Plug>(gosh_repl_send_block)
 
 "/vim-gdev-------------------------------------
 
