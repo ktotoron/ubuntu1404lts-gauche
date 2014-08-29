@@ -33,14 +33,13 @@
   sudo: yes
   sudo_user: vagrant
 
-- name: copy .vimrc for perl
-  git: repo=git://github.com/ktotoron/vimrc_for_perl.git
-       dest=~/.settings/vim/vimrc_for_perl.git
+- name: copy .vimrc for gauche
+  copy: src=./vim/src/gauche.vimrc dest=~/.settings/vim/gauche.vimrc
   sudo: yes
   sudo_user: vagrant
 
-- name: Install .vimrc for perl
-  command: ln -s ~/.settings/vim/vimrc_for_perl.git/vimrc/perl.vimrc ~/.vimrc creates=~/.vimrc
+- name: Install .vimrc for gauche 
+  command: ln -s ~/.settings/vim/gauche.vimrc ~/.vimrc creates=~/.vimrc
   sudo: yes
   sudo_user: vagrant
 

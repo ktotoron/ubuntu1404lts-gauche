@@ -14,6 +14,7 @@
     - build-essential
     - git
     - zsh
+    - gauche
 
 - name: zsh setting
   shell: chsh -s /usr/bin/zsh vagrant

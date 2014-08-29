@@ -12,7 +12,6 @@ source ~/.zsh_ext/antigen.git/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo
-antigen-bundle antigen-lib
 antigen-bundle git 
 antigen-bundle autojump
 antigen-bundle zsh-users/zsh-syntax-highlighting
