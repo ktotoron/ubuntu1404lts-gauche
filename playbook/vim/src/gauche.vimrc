@@ -36,6 +36,8 @@ NeoBundle 'Shougo/unite.vim'
 " Gauche用補完 
 NeoBundle 'git://github.com/aharisu/vim-gdev'
 
+" vim-niji(lisp用括弧)
+NeoBundle 'amdt/vim-niji'
 
 "/NeoBundle-------------------------------------
 
