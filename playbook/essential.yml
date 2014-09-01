@@ -1,0 +1,35 @@
+---
+
+# essential.yml
+
+- name: Update pkgs
+  apt: update_cache=yes
+
+- name: Upgrade pkgs
+  apt: upgrade=full
+
+- name: Install basic server pkgs
+  apt: pkg={{ item }} force=yes update_cache=yes
+  with_items:
+    - build-essential
+    - git
+    - zsh
+    - gauche
+    - rlwrap
+
+- name: zsh setting
+  shell: chsh -s /usr/bin/zsh vagrant
+  sudo: yes
+
+- name: zsh antigen
+  git: repo=https://github.com/zsh-users/antigen.git
+       dest=~/.zsh_ext/antigen.git
+  sudo: yes
+  sudo_user: vagrant
+
+- name: Setup zsh and antigen
+  script: essential/zsh_setting.sh
+  sudo: yes
+  sudo_user: vagrant
+
+
