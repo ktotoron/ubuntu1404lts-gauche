@@ -33,6 +33,11 @@
   sudo: yes
   sudo_user: vagrant
 
+- name: create_vim_directory
+  file: path=~/.settings/vim/ state=directory
+  sudo: yes
+  sudo_user: vagrant
+
 - name: copy .vimrc for gauche
   copy: src=./vim/src/gauche.vimrc dest=~/.settings/vim/gauche.vimrc
   sudo: yes
